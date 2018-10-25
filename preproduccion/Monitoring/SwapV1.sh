@@ -1,3 +1,8 @@
+
+# This code is get from Erik Ljungstrom
+# This file can be used  with the following line
+# sh SwapV1.sh | sort -n -k 5^C
+
 SUM=0
 OVERALL=0
 for DIR in `find /proc/ -maxdepth 1 -type d | egrep "^/proc/[0-9]"` ; do
