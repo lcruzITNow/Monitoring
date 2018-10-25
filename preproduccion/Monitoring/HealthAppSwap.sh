@@ -2,11 +2,8 @@
 
     # find-out-what-is-using-your-swap.sh
     # -- Get current swap usage for all running processes
-    # --
-    # -- rev.0.3, 2012-09-03, Jan Smid          - alignment and intendation, sorting
-    # -- rev.0.2, 2012-08-09, Mikko Rantalainen - pipe the output to "sort -nk3" to get sorted output
-    # -- rev.0.1, 2011-05-27, Erik Ljungstrom   - initial version
-
+    # -- This code is based from the follow page: 
+    # https://stackoverflow.com/questions/479953/how-to-find-out-which-processes-are-using-swap-space-in-linux
 
 SCRIPT_NAME=`basename $0`;
 SORT="kb";                 # {pid|kB|name} as first parameter, [default: kb]
