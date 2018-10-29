@@ -1,0 +1,23 @@
+version: '3'
+services:
+  dns:
+     image: digitallumberjack/docker-bind9
+     env_file: .env
+     container_name: dns_server1
+     user: root
+     command: bash -c "apt-get update && apt-get install -y openssh-server"
+#     restart: always
+     ports:
+        - "53:53"
+        - "722:22"
+  web:
+    image: centos/httpd-24-centos7
+    container_name: httpd
+    user: root
+    ports:
+      - "780:80"
+      - "7443:443"
+    
+    #volumes:
+#      - ./conf/httpd.conf:/etc/httpd/conf/httpd.conf
+   #   - /home/lyonel/Documentos/TEST/:/var/www/html/
